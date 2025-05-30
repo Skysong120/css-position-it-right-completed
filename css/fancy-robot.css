@@ -1,38 +1,534 @@
 .robot-container {
+  width: 98%;
+  height: 100%;
+  margin: 4% auto 0;
+  position: relative;
 }
 
 .robot-face-shape {
+  position: relative;
+  border: 15px solid #00ffff;
+  border-radius: 15%;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  top: 24%;
+  background-image: linear-gradient(90deg, #2f4f4f, #483d8b);
 }
 
 .robot-eye-left {
+  position: relative;
+  top: 10%;
+  left: 20%;
+
+  width: 150px;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    78.53% 59.27%,
+    90.45% 79.39%,
+    67.63% 74.27%,
+    65.45% 97.55%,
+    50% 80%,
+    34.55% 97.55%,
+    32.37% 74.27%,
+    9.55% 79.39%,
+    21.47% 59.27%,
+    0% 50%,
+    21.47% 40.73%,
+    9.55% 20.61%,
+    32.37% 25.73%,
+    34.55% 2.45%,
+    50% 20%,
+    65.45% 2.45%,
+    67.63% 25.73%,
+    90.45% 20.61%,
+    78.53% 40.73%,
+    100% 50%,
+    78.53% 59.27%,
+    calc(78.53% - 5.71px) calc(59.27% - 1.85px),
+    calc(100% - 10px) calc(50% - 0px),
+    calc(78.53% - 5.71px) calc(40.73% - -1.85px),
+    calc(90.45% - 8.09px) calc(20.61% - -5.88px),
+    calc(67.63% - 3.53px) calc(25.73% - -4.85px),
+    calc(65.45% - 3.09px) calc(2.45% - -9.51px),
+    calc(50% - 0px) calc(20% - -6px),
+    calc(34.55% - -3.09px) calc(2.45% - -9.51px),
+    calc(32.37% - -3.53px) calc(25.73% - -4.85px),
+    calc(9.55% - -8.09px) calc(20.61% - -5.88px),
+    calc(21.47% - -5.71px) calc(40.73% - -1.85px),
+    calc(0% - -10px) calc(50% - 0px),
+    calc(21.47% - -5.71px) calc(59.27% - 1.85px),
+    calc(9.55% - -8.09px) calc(79.39% - 5.88px),
+    calc(32.37% - -3.53px) calc(74.27% - 4.85px),
+    calc(34.55% - -3.09px) calc(97.55% - 9.51px),
+    calc(50% - 0px) calc(80% - 6px),
+    calc(65.45% - 3.09px) calc(97.55% - 9.51px),
+    calc(67.63% - 3.53px) calc(74.27% - 4.85px),
+    calc(90.45% - 8.09px) calc(79.39% - 5.88px),
+    calc(78.53% - 5.71px) calc(59.27% - 1.85px),
+    calc(100% - 10px) calc(50% - 0px)
+  );
+  background: #ffd700;
+}
+
+.robot-inner-eye-left {
+  position: relative;
+  top: -50px;
+  left: 27.5%;
+
+  width: 64px;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    97.55% 65.45%,
+    79.39% 90.45%,
+    50% 100%,
+    20.61% 90.45%,
+    2.45% 65.45%,
+    2.45% 34.55%,
+    20.61% 9.55%,
+    50% 0%,
+    79.39% 9.55%,
+    97.55% 34.55%
+  );
+  background-image: url("https://fastly.picsum.photos/id/137/70/70.jpg?hmac=dAtvGsE8qgj4Vxee15N_cDbHlB2wcQSlYjXzCMOXFd8");
+}
+
+.robot-pupil-left {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  top: -91px;
+  left: 31.5%;
+  border-radius: 50%;
+  background: #000;
 }
 
 .robot-eye-right {
+  position: relative;
+  top: -175px;
+  left: 58%;
+
+  width: 150px; /* adjust to control the size */
+  aspect-ratio: 1;
+  clip-path: polygon(
+    100% 50%,
+    77.72% 61.48%,
+    85.36% 85.36%,
+    61.48% 77.72%,
+    50% 100%,
+    38.52% 77.72%,
+    14.64% 85.36%,
+    22.28% 61.48%,
+    0% 50%,
+    22.28% 38.52%,
+    14.64% 14.64%,
+    38.52% 22.28%,
+    50% 0%,
+    61.48% 22.28%,
+    85.36% 14.64%,
+    77.72% 38.52%,
+    100% 50%,
+    77.72% 61.48%,
+    calc(77.72% - 5.54px) calc(61.48% - 2.3px),
+    calc(100% - 10px) calc(50% - 0px),
+    calc(77.72% - 5.54px) calc(38.52% - -2.3px),
+    calc(85.36% - 7.07px) calc(14.64% - -7.07px),
+    calc(61.48% - 2.3px) calc(22.28% - -5.54px),
+    calc(50% - 0px) calc(0% - -10px),
+    calc(38.52% - -2.3px) calc(22.28% - -5.54px),
+    calc(14.64% - -7.07px) calc(14.64% - -7.07px),
+    calc(22.28% - -5.54px) calc(38.52% - -2.3px),
+    calc(0% - -10px) calc(50% - 0px),
+    calc(22.28% - -5.54px) calc(61.48% - 2.3px),
+    calc(14.64% - -7.07px) calc(85.36% - 7.07px),
+    calc(38.52% - -2.3px) calc(77.72% - 5.54px),
+    calc(50% - 0px) calc(100% - 10px),
+    calc(61.48% - 2.3px) calc(77.72% - 5.54px),
+    calc(85.36% - 7.07px) calc(85.36% - 7.07px),
+    calc(77.72% - 5.54px) calc(61.48% - 2.3px),
+    calc(100% - 10px) calc(50% - 0px)
+  );
+  background: #ffd700;
+}
+
+.robot-inner-eye-right {
+  position: relative;
+  top: -280px;
+  left: 66%;
+
+  width: 60px;
+  aspect-ratio: 1;
+  --o: calc(50% * tan(-22.5deg));
+  clip-path: polygon(
+    var(--o) 50%,
+    50% var(--o),
+    calc(100% - var(--o)) 50%,
+    50% calc(100% - var(--o))
+  );
+  background-image: url("https://fastly.picsum.photos/id/137/60/60.jpg?hmac=Z86IlzMaYQWHJ3MkPsmY3KNQn6TYHKk4YKFJ3q-UD8U");
+}
+
+.robot-pupil-right {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  top: -320px;
+  left: 69.5%;
+  border-radius: 50%;
+  background: #000;
 }
 
 .robot-ear-left {
+  position: absolute;
+  top: 15%;
+  left: -22%;
+
+  --p: 50px;
+  height: 25%;
+  aspect-ratio: 2/3;
+  clip-path: polygon(0 calc(100% - var(--p)), 0 0, 100% var(--p), 100% 100%);
+  background-image: linear-gradient(315deg, #0d350d, #00ff00);
 }
 
 .robot-ear-right {
+  position: absolute;
+  top: 15%;
+  left: 105%;
+
+  --p: 50px;
+  height: 25%;
+  aspect-ratio: 2/3;
+  clip-path: polygon(0 var(--p), 0 100%, 100% calc(100% - var(--p)), 100% 0);
+  background-image: linear-gradient(45deg, #0d350d, #00ff00);
 }
 
 .robot-nose {
+  position: relative;
+  bottom: 250px;
+  left: 38%;
+
+  --r: 20px; /* border radius */
+
+  width: 8.125em;
+  aspect-ratio: 1 / cos(30deg);
+  --_g: calc(tan(60deg) * var(--r)) bottom var(--r), #000 98%, #0000 101%;
+  -webkit-mask: conic-gradient(
+        from -30deg at 50% calc(200% - 3 * var(--r) / 2),
+        #000 60deg,
+        #0000 0
+      )
+      0 100%/100% calc(100% - 3 * var(--r) / 2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2 * var(--r)), #000 98%, #0000 101%),
+    radial-gradient(var(--r) at left var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  mask: conic-gradient(
+        from -30deg at 50% calc(200% - 3 * var(--r) / 2),
+        #000 60deg,
+        #0000 0
+      )
+      0 100%/100% calc(100% - 3 * var(--r) / 2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2 * var(--r)), #000 98%, #0000 101%),
+    radial-gradient(var(--r) at left var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #cd5c5c;
 }
 
 .robot-teeth {
+  position: relative;
+  border: 8px solid #f08080;
+  border-radius: 15%;
+  width: 47%;
+  height: 17%;
+  bottom: 200px;
+  /* display: inline; */
+  left: 25%;
 }
 
-.robot-tooth {
+.robot-tooth-one {
+  position: relative;
+  height: 30px;
+  top: 5px;
+  left: 4px;
+
+  --p: 20px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #d3d3d3;
+}
+
+.robot-tooth-two {
+  position: relative;
+  height: 30px;
+  top: -25px;
+  left: 54px;
+
+  --p: 15px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #d3d3d3;
+}
+
+.robot-tooth-three {
+  position: relative;
+  height: 30px;
+  top: -55px;
+  left: 104px;
+
+  --p: 10px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #d3d3d3;
+}
+
+.robot-tooth-four {
+  position: relative;
+  height: 30px;
+  top: -85px;
+  left: 154px;
+
+  --p: 15px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #d3d3d3;
+}
+
+.robot-tooth-five {
+  position: relative;
+  height: 30px;
+  top: -115px;
+  left: 204px;
+
+  --p: 20px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 100%, calc(100% - var(--p)) 100%, 100% 0, 0 0);
+  background: #d3d3d3;
+}
+
+.robot-tooth-six {
+  position: relative;
+  height: 30px;
+  top: -105px;
+  left: 4px;
+
+  --p: 20px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d3d3d3;
+}
+
+.robot-tooth-seven {
+  position: relative;
+  height: 30px;
+  top: -135px;
+  left: 54px;
+
+  --p: 15px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d3d3d3;
+}
+
+.robot-tooth-eight {
+  position: relative;
+  height: 30px;
+  top: -165px;
+  left: 104px;
+
+  --p: 10px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d3d3d3;
+}
+
+.robot-tooth-nine {
+  position: relative;
+  height: 30px;
+  top: -195px;
+  left: 154px;
+
+  --p: 15px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d3d3d3;
+}
+
+.robot-tooth-ten {
+  position: relative;
+  height: 30px;
+  top: -225px;
+  left: 204px;
+
+  --p: 20px;
+  aspect-ratio: 3/2;
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d3d3d3;
 }
 
 .robot-hair-style {
+  position: absolute;
+  top: -165px;
+  left: 15%;
+  height: 150px;
+  width: 70%;
 }
 
 .robot-hair-one {
+  position: absolute;
+  height: 80px;
+  bottom: 15px;
+  left: 20px;
+
+  --a: 80deg;
+  --s: 40px;
+  --b: 10px;
+
+  background: #ff00ff;
+  opacity: 50%;
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 50px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
 }
 
 .robot-hair-two {
+  position: absolute;
+  height: 110px;
+  bottom: 15px;
+  left: 90px;
+
+  --a: 80deg;
+  --s: 60px;
+  --b: 15px;
+
+  background: #7b68ee;
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 50px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
 }
 
 .robot-hair-three {
+  position: absolute;
+  height: 140px;
+  bottom: 15px;
+  left: 170px;
+
+  --a: 80deg;
+  --s: 75px;
+  --b: 20px;
+
+  background: #4169e1;
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 50px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
+}
+
+.robot-hair-four {
+  position: absolute;
+  height: 110px;
+  bottom: 15px;
+  right: 85px;
+
+  --a: 80deg;
+  --s: 60px;
+  --b: 15px;
+
+  background: #7b68ee;
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 50px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
+}
+
+.robot-hair-five {
+  position: absolute;
+  height: 80px;
+  bottom: 15px;
+  right: 20px;
+
+  --a: 80deg;
+  --s: 40px;
+  --b: 10px;
+
+  background: #ff00ff;
+  opacity: 50%;
+  width: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+  min-height: 50px;
+  --_g: 100% var(--s) repeat-y
+    conic-gradient(
+      from calc(90deg - var(--a) / 2) at left,
+      #0000,
+      #000 1deg calc(var(--a) - 1deg),
+      #0000 var(--a)
+    );
+  mask: var(--b) 50% / var(--_g) exclude, 0 50% / var(--_g);
+}
+
+.antenna-one {
+  position: absolute;
+  height: 150px;
+  width: 5px;
+  bottom: 0;
+  left: -70px;
+  transform: rotate(-20deg);
+  background: #fffafa;
+}
+
+.antenna-one-top {
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  bottom: 150px;
+  left: -145px;
+  transform: rotate(-20deg);
+  border-radius: 50%;
+  background: #696969;
+}
+
+.antenna-two {
+  position: absolute;
+  height: 150px;
+  width: 5px;
+  bottom: 0;
+  right: -70px;
+  transform: rotate(20deg);
+  background: #fffafa;
+}
+
+.antenna-two-top {
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  bottom: 150px;
+  right: -145px;
+  transform: rotate(20deg);
+  border-radius: 50%;
+  background: #696969;
 }
